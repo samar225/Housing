@@ -9,7 +9,7 @@
                        $output .= '
                         
                        <div class="form-group">
-                       <p >  Approving this property? Are you sure ?</p>
+                       <p >  Approving this property? Are you sure?</p>
                            <input type="hidden" name="property_id" value="'.$property_id .'">
                          </div>  ';
                            

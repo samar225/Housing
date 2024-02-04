@@ -42,7 +42,7 @@ $productSizes = $product->getProductSize();
 
 
     <div class="row">
-      <aside class="col-lg-2 col-md-3 sidenav">
+      <aside class="col-lg-2 col-md-3 ">
 
         <div class="list-group">
           <h3>Price</h3>
@@ -56,8 +56,9 @@ $productSizes = $product->getProductSize();
           <div style="height: 180px; overflow-y: auto; overflow-x: hidden;">
           
               <div class="list-group-item checkbox">
-                <label><input type="checkbox" class="common_selector whose" value="men"> Men</label> <br/>
-                <label><input type="checkbox" class="common_selector whose" value="women"> Women</label>
+              <label><input type="checkbox" class="common_selector all" value="all"> All</label> <br/>
+                <label><input type="checkbox" class="common_selector men" value="men"> Men</label> <br/>
+                <label><input type="checkbox" class="common_selector women" value="women"> Women</label>
               </div>
          
 
@@ -121,6 +122,7 @@ include("footer.php");
     }
   }
 </script>
+<!--
 <script>
 $(document).ready(function(){
 
@@ -128,19 +130,19 @@ $(document).ready(function(){
 
     function filter_data()
     {
-        $('.filter_data').html('<div id="loading" style="" ></div>');
+        $('.card').html('<div id="loading" style="" ></div>');
         var action = 'fetch_data';
         var minimum_price = $('#hidden_minimum_price').val();
         var maximum_price = $('#hidden_maximum_price').val();
-        var brand = get_filter('brand');
-        var ram = get_filter('ram');
-        var storage = get_filter('storage');
+        var men = get_filter('men');
+        var all = get_filter('all');
+       
         $.ajax({
             url:"fetch_data.php",
             method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
+            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, all:all, men:men, women:women},
             success:function(data){
-                $('.filter_data').html(data);
+                $('.card').html(data);
             }
         });
     }
@@ -160,8 +162,8 @@ $(document).ready(function(){
 
     $('#price_range').slider({
         range:true,
-        min:1000,
-        max:65000,
+        min:100000,
+        max:10000000,
         values:[1000, 65000],
         step:500,
         stop:function(event, ui)
@@ -174,7 +176,7 @@ $(document).ready(function(){
     });
 
 });
-</script>
+</script>-->
 <script>
   // لتثبيت القائمة الجانبية
   $(document).ready(function(){
