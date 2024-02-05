@@ -198,9 +198,9 @@ include("engine.php");
                                 <label for="property_type">Property Type : *</label>
                                 <select class="form-control" name="property_type" required="required">
                                     <option value="">--Select Property Type--</option>
-                                    <option value="Full House Rent">Bed</option>
-                                    <option value="Flat Rent">Room</option>
-                                    <option value="Room Rent">Apartment</option>
+                                    <option value="Bed">Bed</option>
+                                    <option value="Room">Room</option>
+                                    <option value="Apartment">Apartment</option>
                                 </select>
                             </div>
                             <div class="form-group">

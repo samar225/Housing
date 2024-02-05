@@ -1368,14 +1368,14 @@ section {
 
 /* Portfolio Section - Home Page
 ------------------------------*/
-.container .portfolio-filters {
+.container .button-group {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
 }
 
-.container .portfolio-filters li {
+.container .button-group button {
   cursor: pointer;
   display: inline-block;
   padding: 8px 20px 10px 20px;
@@ -1389,22 +1389,22 @@ section {
   font-family: var(--font-secondary);
 }
 
-.container .portfolio-filters li:hover,
-.container .portfolio-filters li.filter-active {
+.container .button-group button:hover,
+.container .button-group button.filter-active {
   color: var(--color-inverse);
   background-color: var(--color-primary);
 }
 
-.container .portfolio-filters li:first-child {
+.container .button-group button:first-child {
   margin-left: 0;
 }
 
-.container .portfolio-filters li:last-child {
+.container .button-group button:last-child {
   margin-right: 0;
 }
 
 @media (max-width: 575px) {
-  .container .portfolio-filters li {
+  .container .button-group li {
     font-size: 14px;
     margin: 0 0 10px 0;
   }
@@ -2474,11 +2474,12 @@ section {
 .container .posts-list .card {
   box-shadow: 0 4px 16px rgba(var(--color-default-rgb), 0.1);
   padding: 30px;
-
+min-width: 300px;
+min-height: 600px;
   height: fit-content;
   border-radius: 10px;
   margin-bottom: 1rem;
-  overflow: hidden;
+ 
 }
 
 .container .posts-list .post-img {
@@ -3098,7 +3099,7 @@ td {
   margin-bottom: 1rem;
 }
 
-.container .card {
+/*.container .card {
   box-shadow: 0 4px 16px rgba(var(--color-default-rgb), 0.1);
   padding: 30px;
   height: fit-content;
@@ -3107,7 +3108,7 @@ td {
   margin-bottom: 1rem;
   overflow: hidden;
 }
-
+*/
 .container .card .post-img {
   max-height: 240px;
   margin: -30px -30px 15px -30px;
@@ -3122,24 +3123,7 @@ td {
 .container {
   height: fit-content;
 }
-.content .row .sidenav{
- /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
 
- 
-  background-color: #111; /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
-}
-  .sidenav .sticky {
-    position: fixed;
-    left: 10;
-  }
-
-.sidenav h3{
-
-  color: #111;
-
-
+.content{
+  height: fit-content;
 }
